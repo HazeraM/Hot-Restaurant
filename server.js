@@ -12,3 +12,14 @@ app.use(express.json());
 app.listen(PORT, function() {
     console.log("Listening On PORT" + PORT);
 });
+app.get("/homepage", function(req, res) {
+    res.sendFile(path.join(__dirname, "homepage.html"));
+});
+
+app.get("/reservation/form", function(req, res) {
+    res.sendFile(path.join(__dirname, "reservationForm.html"));
+});
+
+app.get("/reservation/view", function(req, res) {
+    res.sendFile(path.join(__dirname, "reservationView.html"));
+});
